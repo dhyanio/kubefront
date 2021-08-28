@@ -3,22 +3,22 @@ package commands
 import (
 	"fmt"
 
+	cons "kubefront/internal/config/constants"
 	models "kubefront/internal/config/models"
 
 	"github.com/BurntSushi/toml"
 	"github.com/spf13/cobra"
 )
 
-// versionCmd represents the version command
 var versionCmd = &cobra.Command{
 	Use:   "version",
 	Short: "Kubefront version details.",
-	Long:  `Kubefront version details.`,
+	Long:  `Fetching KubeFront's current server and client versions.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		versionServer, versionClient := fetchKubefrontVersion()
-		fmt.Printf("KubeFront: is a distributed operating system for effictivy managing Cloud-native serverless application using kubernetes in background.\n\n")
-		fmt.Printf("KubeFront-Server: %s \n",versionServer)
-		fmt.Printf("KubeFront-Client: %s \n",versionClient)
+		fmt.Printf(cons.Discription)
+		fmt.Printf("KubeFront-Server: %s \n", versionServer)
+		fmt.Printf("KubeFront-Client: %s \n", versionClient)
 	},
 }
 
@@ -36,7 +36,7 @@ func init() {
 	// versionCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
-func fetchKubefrontVersion() (string,string) {
+func fetchKubefrontVersion() (string, string) {
 	var details models.TomlDetails
 	if _, err := toml.DecodeFile("details.toml", &details); err != nil {
 		fmt.Println(err)
