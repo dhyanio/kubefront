@@ -1,5 +1,8 @@
 package config
 
-const (
-	KubeModels = "$home/.kube/models"
-)
+type TomlDetails struct {
+	Title         string
+	Discription   string
+	VersionServer string
+	VersionClient string
+}

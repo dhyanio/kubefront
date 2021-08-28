@@ -15,11 +15,12 @@ var cfgFile string
 var rootCmd = &cobra.Command{
   Use:   "kubefront",
   Short: "Kubernetes operations API server",
-  Long: ` Kubernetes multiple operations on resources and objects 
+  Long: `Kubernetes multiple operations on resources and objects 
   like Pods, Services, Deployments..etc.
 
 
-Kubefront is a golang kubernetes wrapper as of now.`,
+  KubeFront: is a golang distributed operating system for effictivy managing Cloud-native
+  serverless application using kubernetes in background.`,
   
   	Run: func(cmd *cobra.Command, args []string) { 
       fmt.Print("This is the workign of our project.\n")
