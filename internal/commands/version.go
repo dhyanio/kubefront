@@ -3,8 +3,8 @@ package commands
 import (
 	"fmt"
 
-	cons "kubefront/internal/config/constants"
-	models "kubefront/internal/config/models"
+	cons "github.com/dhyanio/kubefront/internal/config/constants"
+	models "github.com/dhyanio/kubefront/internal/config/models"
 
 	"github.com/BurntSushi/toml"
 	"github.com/spf13/cobra"

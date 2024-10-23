@@ -1,7 +1,7 @@
 package main
 
 import (
-	"kubefront/internal/commands"
+	"github.com/dhyanio/kubefront/internal/commands"
 )
 
 func main() {
